@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de SQL no Navegador</title>
+   
+    <!-- Link para a folha de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Carregando o SQL.js (SQLite compilado para WebAssembly) via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+</head>
+<body>
+
+    <h1>🖥️ Console SQL no Navegador</h1>
+    <p>Digite seus comandos SQL abaixo e clique em <strong>Executar SQL</strong>. O banco de dados fica salvo na memória do seu navegador (`localStorage`).</p>
+
+    <textarea id="queryInput" placeholder="Ex: SELECT * FROM alunos;">SELECT * FROM alunos;</textarea>
+    <br>
+    <button onclick="executarSQL()">Executar SQL</button>
+
+    <div id="mensagem"></div>
+    <div id="resultadoContainer"></div>
+
+    <!-- Script Procedural da Aplicação -->
+    <script src="script.js"></script>
+</body>
+</html>
